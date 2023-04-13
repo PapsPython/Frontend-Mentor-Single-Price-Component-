@@ -1,0 +1,148 @@
+:root{
+  --primary-cyan-color: hsl(179, 62%, 43%);
+  --primary-brightyellow:hsl(71, 73%, 54%);
+  --neutral-lightgray: hsl(204, 43%, 93%);
+  --neutral-grayishblue:hsl(218, 22%, 67%); 
+  --font-size: 16px;
+}
+
+
+body{
+  margin:0;
+  padding:2em;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  color: white;
+  background-color: var(--neutral-grayishblue);
+  font-family: 'Karla', sans-serif;
+}
+
+*,*:before,*::after{
+  box-sizing: border-box;
+}
+
+main{
+  width:100%;
+  max-width:600px; 
+}
+
+.invitationtocommunity,
+.subscription,
+.valueprop{
+  height: auto;
+  padding: 1em;
+}
+
+
+.invitationtocommunity{
+background-color:white;
+  
+}
+
+.valueandpriceproposition{
+  display: flex;
+  flex-direction: column;
+ }
+
+.subscription{
+  background-color: var(--primary-cyan-color);
+ }
+
+p:first-child{
+  padding-top:0.5em;
+  font-size:1.25rem;
+}
+
+p:first-child,.subscription p:nth-of-type(2){
+   margin:0;
+ }
+
+.invitationtocommunity p:first-child{
+  color: var(--primary-cyan-color);
+ }
+
+.invitationtocommunity p:nth-of-type(2){
+  color: var(--primary-brightyellow);
+  font-size: 1rem;
+}
+
+.invitationtocommunity p:nth-of-type(3){
+  color: var(--neutral-grayishblue);
+  line-height: 1.5;
+}
+
+.subscription p:nth-of-type(2),
+.invitationtocommunity p:nth-of-type(3),
+.valueprop p:not(:first-child){
+  font-size: 0.8rem;
+}
+
+.valueprop{
+  background-color:  hsl(179, 62%, 43%,0.3);
+}
+.valueandpriceproposition{
+  display:flex;
+  flex-direction:column;
+}
+
+.valueandpriceproposition p:first-child{
+ color:white; 
+}
+
+.price{
+  display: flex;
+  gap:0.5em;
+ }
+
+.price h1{
+  margin-top:0.6em;
+  margin-bottom: 0.3em;
+  font-size:2rem;
+}
+
+.price span{
+  align-self: center;
+  color:red;
+}
+
+button{
+  background-color:var(--primary-brightyellow);
+  border:none;
+  width:100%;
+  padding:1em;
+  margin-top:2em;
+  color:white;
+  border-radius:5px;
+  box-shadow:0px 4px 12px gray;
+}
+
+.valueprop p:not(:first-child){
+   line-height:0.6;
+}
+
+.valueprop p:first-child{
+  padding-bottom:0.5em;
+  padding-top:0.5em;
+}
+
+@media screen and (min-width :500px){
+  .valueandpriceproposition{
+    display:flex;
+    flex-direction:row;
+  }
+  
+  .subscription,
+  .valueprop{
+    flex-shrink:1;
+    flex-basis:300px;
+  }
+  
+}
+
+
+
+
+
+
+
